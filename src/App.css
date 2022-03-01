@@ -1,0 +1,60 @@
+/* reset */
+#root,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* 100% height desktop, mobile, table */
+  box-sizing: border-box;
+  font-size: 32px; /* base font */
+}
+
+h1 {
+  font-size: inherit;
+}
+
+.app {
+  height: 100%; /* occupies 100% relative to parent element, always snaps to parent element */
+  background: url("./assets/bg.jpg");
+  background-size: cover; /* Resize the background image to cover the entire container */
+  background-position: center; /* sets the starting position of a background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  padding: 40px;
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .card {
+    height: 100%;
+    width: 100%;
+    border-radius: 0px;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 16px;
+  }
+
+  .button {
+    padding: 10px 25px;
+  }
+}
+
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 13px;
+  padding: 15px 30px;
+}
